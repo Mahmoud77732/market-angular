@@ -1,0 +1,60 @@
+
+
+:root{
+  $flag : inline-block;
+}
+
+
+.card{
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+  margin: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  &:hover{
+    transform: scale(1.02);
+  }
+  .my-image{
+    width: 100%;
+    height: 200px;
+  }
+  .caption{
+    padding-top: 0;
+  }
+  .title{
+    height: 75px;
+    overflow: hidden;
+    padding: 5px 15px;
+    font-size: 18px;
+    background-color: #eee;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .description{
+    margin: 15px 0;
+    height: 100px;
+    overflow: hidden;
+    font-size: 16px;
+    padding: 5px 15px;
+  }
+  .cardFooter{
+    width: 80%;
+    height: 10%;
+  }
+  span{
+    padding: 3px 7px;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: #333;
+    color: white;
+  }
+  .icon-position{
+    position: absolute;
+    top: 4%;
+    left: 4%;
+  }
+}

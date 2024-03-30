@@ -1,0 +1,32 @@
+
+
+
+
+
+<div class="card rounded-4 text-center d-flex justify-content-between align-items-center">
+  <!-- show txt-"see more" when hover on info-link -->
+  <a routerLink="/details/{{data.id}}">
+    <i class="fa-sharp fa-solid fa-circle-info fa-2xl text-danger icon-position"></i>
+  </a>
+  <img src="{{data.image}}" class="card-img-top my-image border rounded-4" alt="product_image">
+  <div class="card-body d-flex flex-column justify-content-between align-items-center">
+    <div class="caption">
+      <h5 class="card-title title border rounded-4 bg-secondary-subtle text-secondary-emphasis">{{data.title}}</h5>
+      <!-- you can make description-text-truncate using bootstrap "text-truncate" element  -->
+      <p class="card-text description">{{data.description}}</p>
+    </div>
+    <div class="m-1 cardFooter d-flex justify-content-between align-items-center">
+      <button class="btn btn-success" *ngIf="!addButton" (click)="addButton=true">
+        <i class="fa-sharp fa-solid fa-cart-plus"></i>
+      </button>
+      <div class="d-flex w-50" *ngIf="addButton">
+        <input type="number" class="form-control" [(ngModel)]="amount">
+        <button class="btn btn-danger" (click)="add(); addButton=false;">Add</button>
+      </div>
+      <span>{{data.price}} L.E</span>
+    </div>
+  </div>
+</div>
+
+
+
